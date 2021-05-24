@@ -1,0 +1,7 @@
+name: Radiumenu
+version: ${project.version}
+main: dev.anhcraft.radiumenu.Radiumenu
+api-version: "1.13"
+softdepend: [PlaceholderAPI,Vault,PlayerPoints]
+authors: [anhcraft]
+description: radiumenu

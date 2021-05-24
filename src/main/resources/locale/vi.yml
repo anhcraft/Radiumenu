@@ -1,0 +1,183 @@
+messages:
+  no_perm: "&cBạn không có quyền!"
+  reloaded: "&aĐã nạp lại plugin!"
+  must_be_player: "&cBạn phải là người chơi!"
+  inaccessible_gui: "&eBạn không thể truy cập GUI này vì nó đã bị tắt!"
+  inv_full: "&cTúi đã đầy! &eHãy xóa bớt các vật phẩm không cần thiết và thử lại"
+  economic_not_init: "&cHệ thống tiền tệ chưa được khởi tạo! Hãy liên hệ với owner"
+  transaction_error: "&cĐã xảy ra lỗi với hệ thống tiền tệ! Không thể thực hiện giao dịch"
+  not_enough_money: "&cBạn không có đủ tiền! &fBạn cần thêm &b${need_more}"
+  not_enough_points: "&cBạn không có đủ xu! &fBạn cần thêm &b{need_more} &fxu"
+  positive_integer: "&eVui lòng gõ một số nguyên dương"
+  positive_real_number: "&eVui lòng gõ một số thực dương"
+  not_enough_items: "&cBạn không có đủ vật phẩm trao đổi!"
+  reached_limit: "&cBạn đã đạt giới hạn về số lần giao dịch! &e(Tối đa: {limit})"
+  id_already_existed: "&cĐã tồn tại ID đó"
+
+gui:
+  back: "&cQuay lại"
+  money_cost: "&e➴ Giá tiền: &f${value}"
+  point_cost: "&e➴ Giá xu: &f{value} xu"
+  tradingitem: "&e➴ Vật phẩm giao dịch: &f{value}"
+  tradingitem_use: "&7<< Chuột phải để xem các vật phẩm giao dịch >>"
+  limit_transaction: "&e➴ Giới hạn số lần giao dịch: &f{value}"
+  pagination:
+    prev: "&cTrang trước"
+    next: "&aTrang sau"
+  admin_menu:
+    title: "&4&lDANH SÁCH GUI"
+    enabled: "&a&l[ĐÃ BẬT]"
+    disabled: "&c&l[ĐÃ TẮT]"
+    gui_info:
+      - "&aId: &f{id}"
+      - "&aKích cỡ: &f{size}"
+      - "&aLệnh: &f{commands}"
+      - "&a"
+      - "&f<< Chuột trái để sửa >>"
+      - "&f<< Chuột phải để bật/tắt >>"
+      - "&f<< Shift + Chuột trái để nhân bản >>"
+      - "&f<< Shift + Chuột phải để xóa >>"
+    new_gui: "&eTạo GUI mới"
+    new_gui_info:
+      - "&f<< Chuột trái: 54 ô >>"
+      - "&f<< Chuột phải: 27 ô >>"
+      - "&f<< Shift + Chuột trái: 45 ô >>"
+      - "&f<< Shift + Chuột phải: 108 ô >>"
+      - "&7(Bạn có thể chỉnh kích cỡ sau)"
+  destroy_menu:
+    title: "&4&lTRÌNH XOÁ GUI"
+    accept: "&aĐồng ý"
+    deny: "&cTừ chối"
+    info: "&f&lBạn có chắc là muốn xóa GUI này?"
+  gui_editor:
+    title: "&4&lTRÌNH SỬA GUI: &r{title}"
+    info:
+      - "&dVị trí: &f{current}/{max}"
+      - "&a"
+      - "&b<< Chuột trái để sửa >>"
+      - "&b<< Chuột phải để sao chép >>"
+      - "&b<< Shift + Chuột phải để reset >>"
+    get_opening_perm: "&aNhận quyền mở GUI này"
+    rename: "&bĐổi tên"
+    rename_msg: "&a&lNhập tên mới:"
+    cmd: "&eLệnh"
+    edit_id: "&4Chỉnh ID"
+    edit_id_msg: "&a&lNhập ID mới:"
+    modify_size: "&4Chỉnh kích cỡ"
+    modify_size_info:
+      - "&dKích cỡ hiện tại: {current}"
+      - "&a"
+      - "&a<< Chuột trái để tăng thêm 1 ô >>"
+      - "&a<< Shift + Chuột trái để tăng thêm 9 ô >>"
+      - "&a<< Chuột phải để giảm đi 1 ô >>"
+      - "&a<< Shift + Chuột phải để giảm đi 9 ô >>"
+      - "&7(Vật phẩm có thể bị xóa sau khi giảm kích cỡ)"
+    modify_size_info_min:
+      - "&dKích cỡ hiện tại: {current}"
+      - "&c&l[Đã đạt số lượng thấp nhất]"
+      - "&a"
+      - "&a<< Chuột trái để tăng thêm 1 ô >>"
+      - "&a<< Shift + Chuột trái để tăng thêm 9 ô >>"
+    modify_size_info_max:
+      - "&dKích cỡ hiện tại: {current}"
+      - "&c&l[Đã đạt giới hạn số lượng]"
+      - "&a"
+      - "&a<< Chuột phải để giảm đi 1 ô >>"
+      - "&a<< Shift + Chuột phải để giảm đi 9 ô >>"
+      - "&7(Vật phẩm có thể bị xóa sau khi giảm kích cỡ)"
+  gui_cmd_editor:
+    title: "&4&lTRÌNH CHỈNH LỆNH MỞ GUI"
+    info:
+      - "&cẤn vào để xóa"
+    add: "&aThêm lệnh mới"
+    add_msg: "&a&lNhập lệnh cần thêm:"
+  slot_editor:
+    title: "&4&lTRÌNH CHỈNH SỬA SLOT ({index})"
+    edit_item: "&aSửa vật phẩm"
+    set_money: "&bĐặt giá tiền"
+    set_money_info:
+      - "&aHiện tại: &f${current}"
+    set_money_msg: "&a&lNhập giá tiền mới:"
+    set_points: "&bĐặt giá xu"
+    set_points_info:
+      - "&aHiện tại: &f{current} xu"
+    set_points_msg: "&a&lNhập giá xu mới:"
+    auto_close: "&eTự động đóng GUI"
+    auto_close_info:
+      - "{status}"
+      - "&a"
+      - "&fTự đóng GUI sau khi giao dịch thành công"
+    item_reward: "&eTặng vật phẩm"
+    item_reward_info:
+      - "{status}"
+      - "&a"
+      - "&fTặng vật phẩm gốc (chưa có placeholder)"
+      - "&fsau khi giao dịch thành công"
+    enabled: "&aĐã bật"
+    disabled: "&cĐã tắt"
+    cmd: "&5Lệnh"
+    tradeitems: "&aVật phẩm giao dịch"
+    tradeitems_info:
+      - "&fBán vật phẩm và nhận thưởng!"
+    limit_transaction: "&eGiới hạn số lần giao dịch"
+    limit_transaction_info:
+      - "&aGiới hạn hiện tại: &f{current}"
+      - "&eTổng số giao dịch: &f{total}"
+      - "&a"
+      - "&a<< Chuột trái để thay đổi >>"
+      - "&a<< Chuột phải để reset >>"
+    limit_transaction_msg: "&a&lNhập giới hạn giao dịch mới:"
+    skull_owner: "&aSửa skin đầu lâu"
+    skull_owner_info:
+      - "&eChủ skin: &f{current}"
+      - "&a"
+      - "&fViết %s% để thay thế bằng tên người ấn vào slot này"
+    skull_owner_msg: "&a&lNhập tên skin:"
+    perm_required: "&aBật/tắt yêu cầu quyền hạn"
+    perm_required_info:
+      - "{status}"
+      - "&a"
+      - "&a<< Chuột trái để thay đổi >>"
+      - "&a<< Chuột phải để xem quyền >>"
+  slot_copy_helper:
+    title: "&4&lCÔNG CỤ COPY SLOT NHANH ({index})"
+    self:
+      - "&dVị trí: &f{current}/{max}"
+      - "&c&l[!] Không thể sao chép vào chính bản thân"
+    other:
+      - "&dVị trí: &f{current}/{max}"
+      - "&b&lẤn vào để sao chép từ ô &f&l{from}"
+  slot_cmd_editor:
+    title: "&4&lTRÌNH CHỈNH SỬA LỆNH ({index})"
+    info:
+      - "&cẤn vào để xóa"
+    add: "&aThêm lệnh mới"
+    add_info:
+      - "&eViết lệnh không có kí tự '/' ở trước"
+      - "&eTheo mặc định, mọi lệnh sẽ được thực thi bởi người ấn vào slot này"
+      - '&bViết &fconsole: <lệnh> &bđể yêu cầu plugin chạy lệnh đó bằng quyền'
+      - '&bcủa bảng điều khiển (console).'
+      - '&bViết &fplayer_<tên>: <lệnh> &bđể yêu cầu plugin chạy lệnh đó'
+      - '&bbằng quyền của người chơi'
+      - '&bViết &fconnect: <máy chủ> &bđể yêu cầu plugin kết nối người đã'
+      - '&bấn vào slot này tới máy chủ đích'
+      - '&bViết &fop: <lệnh> &bđể yêu cầu plugin chạy lệnh bởi người'
+      - '&bấn vào slot + quyền OP'
+      - '&bViết &fgui: <id> &bđể yêu cầu plugin mở GUI'
+      - "&a"
+      - "&a%s% &bsẽ trả về tên người đã ấn vào slot này"
+    add_msg: "&a&lNhập lệnh cần thêm:"
+  slot_item_editor:
+    title: "&4&lTRÌNH CHỈNH SỬA ITEM ({index})"
+    notice: "&bHãy đặt vật phẩm vào ô đầu tiên"
+    done: "&aHoàn tất"
+  slot_tradeitems_editor:
+    title: "&4&lTRÌNH SỬA VẬT PHẨM GIAO DỊCH ({index})"
+    info: "&cẤn vào để xóa"
+    add: "&aThêm vật phẩm mới"
+  slot_tradeitems_adder:
+    title: "&4&lTRÌNH THÊM VẬT PHẨM GIAO DỊCH ({index})"
+    notice: "&bHãy đặt vật phẩm giao dịch vào ô đầu tiên"
+    done: "&aHoàn tất"
+  view_tradeitems:
+    title: "&4&lVẬT PHẨM GIAO DỊCH ({index})"

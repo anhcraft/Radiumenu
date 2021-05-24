@@ -1,0 +1,184 @@
+messages:
+  no_perm: "&cYou don't have permission!"
+  reloaded: "&aReloaded the plugin!"
+  must_be_player: "&cYou must be an in-game player!"
+  inaccessible_gui: "&eYou can't access this GUI at this time, it was disabled!"
+  inv_full: "&cYour inventory is full! &eClear unnecessary items and try again"
+  economic_not_init: "&cThe economic system wasn't initialized! Please contact the owner"
+  transaction_error: "&cHaving errors with the economic system! Can't able to make a transaction"
+  not_enough_money: "&cYou don't have enough money! &fYou need more &b${need_more}"
+  not_enough_points: "&cYou don't have enough points! &fYou need more &b{need_more} &fpoints"
+  positive_integer: "&ePlease type a positive integer"
+  positive_real_number: "&ePlease type a positive real number"
+  not_enough_items: "&cYou don't have enough trading items!"
+  reached_limit: "&cYou've reached the limit of transactions! &e(Limit: {limit})"
+  id_already_existed: "&cAlready existed that ID"
+
+gui:
+  back: "&cBack"
+  money_cost: "&e➴ Money cost: &f${value}"
+  point_cost: "&e➴ Point cost: &f{value} points"
+  tradingitem: "&e➴ Trading item: &f{value} items"
+  tradingitem_use: "&7<< Right-click to view trading items >>"
+  limit_transaction: "&e➴ Limit transaction: &f{value}"
+  pagination:
+    prev: "&cPrevious page"
+    next: "&aNext page"
+  admin_menu:
+    title: "&4&lGUI EDITOR"
+    enabled: "&a&l[ENABLED]"
+    disabled: "&c&l[DISABLED]"
+    gui_info:
+      - "&aId: &f{id}"
+      - "&aSize: &f{size}"
+      - "&aCommands: &f{commands}"
+      - "&a"
+      - "&f<< Left-click to edit >>"
+      - "&f<< Right-click to toggle >>"
+      - "&f<< Shift + Left-click to clone >>"
+      - "&f<< Shift + Right-click to remove >>"
+    new_gui: "&eCreate new GUI"
+    new_gui_info:
+      - "&f<< Left-click: 54 slots >>"
+      - "&f<< Right-click: 27 slots >>"
+      - "&f<< Shift + Left-click: 45 slots >>"
+      - "&f<< Shift + Right-click: 108 slots >>"
+      - "&7(You can modify the size after)"
+  destroy_menu:
+    title: "&4&lGUI REMOVER"
+    accept: "&aAccept"
+    deny: "&cDeny"
+    info: "&f&lAre you sure to remove the GUI?"
+  gui_editor:
+    title: "&4&lGUI EDITOR: &r{title}"
+    info:
+      - "&dPosition: &f{current}/{max}"
+      - "&a"
+      - "&b<< Left-click to edit >>"
+      - "&b<< Right-click to copy >>"
+      - "&b<< Shift + Right-click to reset >>"
+    get_opening_perm: "&aGet the opening permission"
+    rename: "&bRename"
+    rename_msg: "&a&lEnter the new name:"
+    cmd: "&eCommands"
+    edit_id: "&4Edit ID"
+    edit_id_msg: "&a&lEnter the new ID:"
+    modify_size: "&4Modify size"
+    modify_size_info:
+      - "&dCurrent size: {current}"
+      - "&a"
+      - "&a<< Left-click to increase by 1 slot >>"
+      - "&a<< Shift + Left-click to increase by 9 slot >>"
+      - "&a<< Right-click to decrease by 1 slot >>"
+      - "&a<< Shift + Right-click to decrease by 9 slot >>"
+      - "&7(Your items may be lost after decrease)"
+    modify_size_info_min:
+      - "&dCurrent size: {current}"
+      - "&c&l[Reached the minimum]"
+      - "&a"
+      - "&a<< Left-click to increase by 1 slot >>"
+      - "&a<< Shift + Left-click to increase by 9 slot >>"
+    modify_size_info_max:
+      - "&dCurrent size: {current}"
+      - "&c&l[Reached the maximum]"
+      - "&a"
+      - "&a<< Right-click to decrease by 1 slot >>"
+      - "&a<< Shift + Right-click to decrease by 9 slot >>"
+      - "&7(Your items may be lost after decrease)"
+  gui_cmd_editor:
+    title: "&4&lGUI COMMANDS EDITOR"
+    info:
+      - "&cClick to remove"
+    add: "&aAdd new command"
+    add_msg: "&a&lEnter the new command:"
+  slot_editor:
+    title: "&4&lSLOT EDITOR ({index})"
+    edit_item: "&aEdit item"
+    set_money: "&bSet money cost"
+    set_money_info:
+      - "&aCurrent: &f${current}"
+    set_money_msg: "&a&lEnter the new money cost:"
+    set_points: "&bSet points cost"
+    set_points_info:
+      - "&aCurrent: &f{current} points"
+    set_points_msg: "&a&lEnter the new points cost:"
+    auto_close: "&eAuto close the GUI"
+    auto_close_info:
+      - "{status}"
+      - "&a"
+      - "&fAutomatic close the GUI after success transaction"
+    item_reward: "&eAuto giving item"
+    item_reward_info:
+      - "{status}"
+      - "&a"
+      - "&fGiving the raw item (without placeholders)"
+      - "&fafter success transaction"
+    enabled: "&aEnabled"
+    disabled: "&cDisabled"
+    cmd: "&5Commands"
+    tradeitems: "&aTrading items"
+    tradeitems_info:
+      - "&fSell items then get rewards!"
+    limit_transaction: "&eLimit transactions"
+    limit_transaction_info:
+      - "&aCurrent limit: &f{current}"
+      - "&eTotal transactions: &f{total}"
+      - "&a"
+      - "&a<< Left-click to change >>"
+      - "&a<< Right-click to reset >>"
+    limit_transaction_msg: "&a&lEnter the new transaction limit:"
+    skull_owner: "&aEdit skull owner"
+    skull_owner_info:
+      - "&eOwner: &f{current}"
+      - "&a"
+      - "&fWrite %s% to replace with the name of who clicks this slot"
+    skull_owner_msg: "&a&lEnter the new skull owner:"
+    perm_required: "&aEnable/Disable permission requirement"
+    perm_required_info:
+      - "{status}"
+      - "&a"
+      - "&a<< Left-click to toggle >>"
+      - "&a<< Right-click to view permission >>"
+  slot_copy_helper:
+    title: "&4&lSLOT COPY HELPER ({index})"
+    self:
+      - "&dPosition: &f{current}/{max}"
+      - "&c&l[!] Can't copy the slot to itself"
+    other:
+      - "&dPosition: &f{current}/{max}"
+      - "&b&lClick to copy from slot &f&l{from}"
+  slot_cmd_editor:
+    title: "&4&lSLOT COMMAND EDITOR ({index})"
+    info:
+      - "&cClick to remove"
+    add: "&aAdd new command"
+    add_info:
+      - "&eWrite commands without '/' before"
+      - "&eBy default, commands are executed by who clicked this slot"
+      - '&bWrite &fconsole: <command> &bto tell the'
+      - '&bplugin run the command by the console'
+      - '&bWrite &fplayer_<name>: <command> &bto tell'
+      - '&bthe plugin run the command by the given player'
+      - '&bWrite &fconnect: <server> &bto tell the plugin'
+      - '&bconnect the clicker to the destination server'
+      - '&bWrite &fop: <command> &bto tell the plugin'
+      - '&brun the command by the clicker as an operator'
+      - '&bWrite &fgui: <id> &bto tell the plugin'
+      - '&bopen the GUI for the clicker'
+      - "&a"
+      - "&a%s% &breturns the name of who clicked this slot"
+    add_msg: "&a&lEnter the new command:"
+  slot_item_editor:
+    title: "&4&lSLOT ITEM EDITOR ({index})"
+    notice: "&bPlease put an item at the first slot"
+    done: "&aDone"
+  slot_tradeitems_editor:
+    title: "&4&lSLOT TRADING ITEMS EDITOR ({index})"
+    info: "&cClick to remove"
+    add: "&aAdd new item"
+  slot_tradeitems_adder:
+    title: "&4&lSLOT TRADING ITEMS ADDER ({index})"
+    notice: "&bPlease put a trading item at the first slot"
+    done: "&aDone"
+  view_tradeitems:
+    title: "&4&lTRADING ITEMS ({index})"

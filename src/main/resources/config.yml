@@ -1,0 +1,17 @@
+# plugin's messaging prefix
+prefix: "&5&l[Radiumenu] &f> "
+
+# locale (messages & texts)
+locale: vi
+
+# integrations setting
+integrations:
+  vault: true
+  playerpoints: true
+  placeholderapi: true
+
+# amount of maximum slots allowed to create GUIs
+limit_slot: 1280
+
+# duration in seconds between data-saving times
+save_interval: 30
