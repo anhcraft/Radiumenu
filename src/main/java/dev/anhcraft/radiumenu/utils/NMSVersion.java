@@ -12,7 +12,10 @@ public enum NMSVersion {
     v1_13_R2(6),
     v1_14_R1(7),
     v1_15_R1(8),
-    v1_16_R1(9);
+    v1_16_R1(9),
+    v1_16_R2(10),
+    v1_16_R3(11),
+    v1_17_R1(12);
 
     private static final NMSVersion version;
     private final int id;

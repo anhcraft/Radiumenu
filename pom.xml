@@ -6,7 +6,7 @@
 
     <groupId>dev.anhcraft</groupId>
     <artifactId>radiumenu</artifactId>
-    <version>2.0.4</version>
+    <version>2.0.5</version>
     <packaging>jar</packaging>
 
     <name>Radiumenu</name>
@@ -66,8 +66,8 @@
 
     <repositories>
         <repository>
-            <id>anhcraft-repo</id>
-            <url>https://repo.anhcraft.dev/repository/mvn/</url>
+            <id>rosewood-repo</id>
+            <url>https://repo.rosewooddev.io/repository/public/</url>
         </repository>
         <repository>
             <id>spigotmc-repo</id>
@@ -82,12 +82,12 @@
             <url>http://nexus.hc.to/content/repositories/pub_releases</url>
         </repository>
         <repository>
-            <id>placeholderapi</id>
-            <url>http://repo.extendedclip.com/content/repositories/placeholderapi/</url>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
         </repository>
         <repository>
-            <id>dakani</id>
-            <url>http://repo.dakanilabs.com/content/repositories/public</url>
+            <id>placeholderapi</id>
+            <url>http://repo.extendedclip.com/content/repositories/placeholderapi/</url>
         </repository>
     </repositories>
 
@@ -99,9 +99,9 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>dev.anhcraft</groupId>
-            <artifactId>jvmkit</artifactId>
-            <version>1.1.5</version>
+            <groupId>com.github.anhcraft</groupId>
+            <artifactId>JvmKit</artifactId>
+            <version>v1.1.5</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
@@ -111,15 +111,15 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>net.milkbowl.vault</groupId>
+            <groupId>com.github.MilkBowl</groupId>
             <artifactId>VaultAPI</artifactId>
             <version>1.7</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.black_ixx</groupId>
-            <artifactId>PlayerPoints</artifactId>
-            <version>2.1.3</version>
+            <artifactId>playerpoints</artifactId>
+            <version>3.0.3</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
