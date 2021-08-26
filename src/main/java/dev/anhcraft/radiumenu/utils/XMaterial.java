@@ -1,6 +1,7 @@
 package dev.anhcraft.radiumenu.utils;
 
 import com.google.common.base.Enums;
+import com.google.common.base.Preconditions;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
@@ -1665,7 +1666,7 @@ public enum XMaterial {
      */
     @NotNull
     public static XMaterial matchXMaterial(@NotNull Material material) {
-        Objects.requireNotNull(material, "Cannot match null material");
+        Preconditions.checkNotNull(material, "Cannot match null material");
         return matchDefinedXMaterial(material.name(), UNKNOWN_DATA_VALUE)
                 .orElseThrow(() -> new IllegalArgumentException("Unsupported material with no data value: " + material.name()));
     }
@@ -1684,7 +1685,7 @@ public enum XMaterial {
     @NotNull
     @SuppressWarnings("deprecation")
     public static XMaterial matchXMaterial(@NotNull ItemStack item) {
-        Objects.requireNotNull(item, "Cannot match null ItemStack");
+        Preconditions.checkNotNull(item, "Cannot match null ItemStack");
         String material = item.getType().name();
         byte data = (byte) (Data.ISFLAT || item.getType().getMaxDurability() > 0 ? 0 : item.getDurability());
 
@@ -1960,9 +1961,8 @@ public enum XMaterial {
     @NotNull
     @SuppressWarnings("deprecation")
     public ItemStack setType(@NotNull ItemStack item) {
-        Objects.requireNotNull(item, "Cannot set material for null ItemStack");
+        Preconditions.checkNotNull(item, "Cannot set material for null ItemStack");
         Material material = this.parseMaterial();
-        Objects.requireNotNull(material, () -> "Unsupported material: " + this.name());
 
         item.setType(material);
         if (!Data.ISFLAT && material.getMaxDurability() <= 0) item.setDurability(this.data);
@@ -2073,7 +2073,7 @@ public enum XMaterial {
      */
     @SuppressWarnings("deprecation")
     public boolean isSimilar(@NotNull ItemStack item) {
-        Objects.requireNotNull(item, "Cannot compare with null ItemStack");
+        Preconditions.checkNotNull(item, "Cannot compare with null ItemStack");
         if (item.getType() != this.parseMaterial()) return false;
         return Data.ISFLAT || item.getDurability() == this.data || item.getType().getMaxDurability() > 0;
     }
