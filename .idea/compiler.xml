@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="radiumenu" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Radiumenu" target="17" />
+      <module name="radiumenu" target="17" />
+      <module name="Radiumenu" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
