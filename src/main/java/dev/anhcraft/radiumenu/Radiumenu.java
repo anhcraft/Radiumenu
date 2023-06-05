@@ -148,6 +148,8 @@ public final class Radiumenu extends JavaPlugin {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        CommandUtils.syncCommands();
     }
 
     @Override
