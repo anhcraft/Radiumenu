@@ -42,6 +42,7 @@ import dev.anhcraft.jvmkit.utils.MathUtil;
 import dev.anhcraft.jvmkit.utils.ReflectionUtil;
 import dev.anhcraft.radiumenu.Radiumenu;
 import dev.anhcraft.radiumenu.utils.CommandUtils;
+import org.bukkit.Bukkit;
 import org.bukkit.command.PluginCommand;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -213,7 +214,7 @@ public class GUI {
     }
 
     public void destroyCmd(JavaPlugin plugin, String cmd) {
-        CommandUtils.unregister(plugin, commands.remove(cmd));
+        CommandUtils.unregister(plugin, commands.get(cmd));
     }
 
     public void destroy() {
