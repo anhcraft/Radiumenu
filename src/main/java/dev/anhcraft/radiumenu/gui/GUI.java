@@ -1,48 +1,9 @@
-/*
- * Decompiled with CFR 0.145.
- * 
- * Could not load the following classes:
- *  com.google.common.io.ByteArrayDataOutput
- *  com.google.common.io.ByteStreams
- *  net.md_5.bungee.api.chat.BaseComponent
- *  net.md_5.bungee.api.chat.ClickEvent
- *  net.md_5.bungee.api.chat.ClickEvent$Action
- *  net.md_5.bungee.api.chat.TextComponent
- *  org.bukkit.Bukkit
- *  org.bukkit.Location
- *  org.bukkit.Material
- *  org.bukkit.OfflinePlayer
- *  org.bukkit.Sound
- *  org.bukkit.command.Command
- *  org.bukkit.command.CommandExecutor
- *  org.bukkit.command.CommandSender
- *  org.bukkit.command.PluginCommand
- *  org.bukkit.configuration.ConfigurationSection
- *  org.bukkit.configuration.file.FileConfiguration
- *  org.bukkit.configuration.file.YamlConfiguration
- *  org.bukkit.entity.Player
- *  org.bukkit.entity.Player$Spigot
- *  org.bukkit.event.inventory.ClickType
- *  org.bukkit.event.inventory.InventoryAction
- *  org.bukkit.inventory.Inventory
- *  org.bukkit.inventory.ItemStack
- *  org.bukkit.inventory.PlayerInventory
- *  org.bukkit.inventory.meta.ItemMeta
- *  org.bukkit.inventory.meta.SkullMeta
- *  org.bukkit.plugin.Plugin
- *  org.bukkit.plugin.java.JavaPlugin
- */
 package dev.anhcraft.radiumenu.gui;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.*;
 
 import dev.anhcraft.jvmkit.utils.MathUtil;
 import dev.anhcraft.jvmkit.utils.ReflectionUtil;
 import dev.anhcraft.radiumenu.Radiumenu;
 import dev.anhcraft.radiumenu.utils.CommandUtils;
-import org.bukkit.Bukkit;
 import org.bukkit.command.PluginCommand;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -51,6 +12,10 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.*;
 
 public class GUI {
     public String id;

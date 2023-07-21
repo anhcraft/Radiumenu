@@ -10,7 +10,6 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="radiumenu" target="17" />
       <module name="Radiumenu" target="1.8" />
     </bytecodeTargetLevel>
   </component>
