@@ -29,10 +29,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.StringReader;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public final class Radiumenu extends JavaPlugin {
@@ -148,6 +145,8 @@ public final class Radiumenu extends JavaPlugin {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        CommandUtils.syncCommands();
     }
 
     @Override
@@ -155,8 +154,11 @@ public final class Radiumenu extends JavaPlugin {
         try {
             for (GUI g : GUI.values()) {
                 g.save();
-                for (String cmd : g.getCommands().keySet()) {
-                    g.destroyCmd(this, cmd);
+
+                for (Iterator<String> it = g.getCommands().keySet().iterator(); it.hasNext(); ) {
+                    g.destroyCmd(this, it.next());
+
+                    it.remove();
                 }
             }
         }

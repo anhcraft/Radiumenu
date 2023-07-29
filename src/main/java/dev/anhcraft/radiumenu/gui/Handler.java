@@ -302,7 +302,7 @@ public class Handler {
             player12.closeInventory();
             player12.spigot().sendMessage(new ComponentBuilder(TextComponent.class).text("rdm.open." + GUI.id, new ClickEvent(ClickEvent.Action.SUGGEST_COMMAND, "rdm.open." + GUI.id)).build());
         });
-        inv.set(49, new ItemEditor(localeConfig.getString("gui.gui_editor.rename"), Material.SIGN, 1).getItem(), (player14, inventory, inventoryAction, i13, itemStack, clickType) -> {
+        inv.set(49, new ItemEditor(localeConfig.getString("gui.gui_editor.rename"), XMaterial.OAK_SIGN, 1).getItem(), (player14, inventory, inventoryAction, i13, itemStack, clickType) -> {
             ChatListener.prompt(player14, localeConfig.getString("gui.gui_editor.rename_msg"), s -> {
                 GUI.setTitle(s);
                 editor(player14, index);
@@ -526,7 +526,7 @@ public class Handler {
                 s.set(i, null);
                 continue;
             }
-            s.set(i, new ItemEditor(localeConfig.getString("gui.slot_tradeitems_adder.notice"), Material.SIGN, 1).getItem(), (player1, inventory, inventoryAction, i1, itemStack, clickType) -> {});
+            s.set(i, new ItemEditor(localeConfig.getString("gui.slot_tradeitems_adder.notice"), XMaterial.OAK_SIGN, 1).getItem(), (player1, inventory, inventoryAction, i1, itemStack, clickType) -> {});
         }
         s.open(player);
         player.playSound(player.getLocation(), Sound.BLOCK_CHEST_OPEN, 4.0f, 3.0f);
@@ -600,7 +600,7 @@ public class Handler {
                 s.set(i, GUI.getSlot(index).getRawItem());
                 continue;
             }
-            s.set(i, new ItemEditor(localeConfig.getString("gui.slot_item_editor.notice"), Material.SIGN, 1).getItem(), (player1, inventory, inventoryAction, i1, itemStack, clickType) -> {});
+            s.set(i, new ItemEditor(localeConfig.getString("gui.slot_item_editor.notice"), XMaterial.OAK_SIGN, 1).getItem(), (player1, inventory, inventoryAction, i1, itemStack, clickType) -> {});
         }
         s.open(player);
         player.playSound(player.getLocation(), Sound.BLOCK_CHEST_OPEN, 4.0f, 3.0f);

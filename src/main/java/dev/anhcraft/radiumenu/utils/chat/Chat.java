@@ -1,12 +1,14 @@
 package dev.anhcraft.radiumenu.utils.chat;
 
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import dev.anhcraft.radiumenu.utils.NMSVersion;
+import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.World;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -15,7 +17,19 @@ public class Chat {
     private final BaseComponent prefix;
     private final String plainPrefix;
 
+    private static final Pattern pattern = Pattern.compile("#[a-fA-F\\d]{6}");
+
     public static String color(String text) {
+        if (NMSVersion.is1_16Above()) {
+            Matcher matcher = pattern.matcher(text);
+
+            while (matcher.find()) {
+                String color = text.substring(matcher.start(), matcher.end());
+                text = text.replace(color, ChatColor.of(color) + "");
+                matcher = pattern.matcher(text);
+            }
+        }
+
         return ChatColor.translateAlternateColorCodes('&', text);
     }
 
@@ -27,9 +41,8 @@ public class Chat {
     }
 
     public static List<String> color(List<String> list) {
-        for (int i = 0; i < list.size(); ++i) {
-            list.set(i, ChatColor.translateAlternateColorCodes('&', list.get(i)));
-        }
+        list.replaceAll(textToTranslate -> ChatColor.translateAlternateColorCodes('&', textToTranslate));
+
         return list;
     }
 
